@@ -1,0 +1,134 @@
+:root{
+    /* Colors */
+    --Green200: hsl(148, 38%, 91%);
+    --Green600: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+    --White: hsl(0, 0%, 100%);
+    --Grey500: hsl(186, 15%, 59%);
+    --Grey900: hsl(187, 24%, 22%);
+    /* Weights */
+    --Weight400: 400;
+    --Weight700: 700;
+}
+body{
+    background-color: var(--Green200);
+    font-size: 1rem;
+}
+.form-container{
+    background-color: var(--White);
+    border-radius: 1em;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+.form-title{
+    font-weight: var(--Weight700);
+    font-size: 1.4rem;
+    color: var(--Grey900);
+}
+.inputs label{
+    font-weight: var(--Weight400);
+    font-size: 1rem;
+    color: var(--Grey900);
+}
+.inputs input[type='text'],.inputs input[type='email']{
+    outline: none;
+    border: 1px solid var(--Grey500);
+    width: 100%;
+    height: 3em;
+    border-radius: 0.6em;
+    font-size: 1rem;
+    background: var(--White);
+    transition: border-color 0.2s;
+}
+.inputs textarea {
+    outline: none;
+    border: 1px solid var(--Grey500);
+    width: 100%;
+    min-height: 6em;
+    border-radius: 0.6em;
+    font-size: 1rem;
+    background: var(--White);
+    transition: border-color 0.2s;
+}
+.radio-inputs div{
+    border: 1px solid var(--Grey500);
+    border-radius: 0.6em;
+    background: var(--White);
+    cursor: pointer;
+}
+.radio-inputs div input[type='radio']{
+    height: 1.2em;
+    width: 1.2em;
+    cursor: pointer;
+}
+.radio-inputs div input[type='radio']:checked + label {
+    color: var(--Green600);
+    font-weight: var(--Weight700);
+}
+
+.radio-inputs div:has(input[type='radio']:checked) {
+    border-color: var(--Green600);
+    background-color: var(--Green200);
+}
+.checkbox-input {
+    font-size: 1rem;
+}
+.Checkbox-input input[type='checkbox'] {
+    width: 1.2em;
+    height: 1.2em;
+    accent-color: var(--Green600);
+    cursor: pointer;
+}
+.submit {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.6em;
+    background-color: var(--Green600);
+    color: var(--White);
+    font-weight: var(--Weight700);
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.required {
+    color: var(--Green600);
+    font-weight: var(--Weight700);
+    font-size: 0.8em;
+}
+label.Err {
+    color: var(--Red);
+    font-size: 0.8rem;
+    font-weight: var(--Weight700);
+}
+/* message style */
+.message-card{
+    background-color: var(--Grey900);
+    color: var(--White);
+    border-radius: 1em;
+}
+.image{
+    width: 1.4em;
+    height: 1.4em;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.title{
+    font-size: 1.4rem;
+    font-weight: var(--Weight700);
+}
+.description{
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+    .form-title {
+        font-size: 1rem;
+    }
+    .submit {
+        font-size: 1rem;
+    }
+}

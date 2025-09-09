@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla',sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Green200, #e9f7f3);
+}
+#root{
+    width: 100%;
+    height: 100%;
+}
+.form-container{
+    width: min(90%,30em);
+    height: 90%;
+    margin: auto;
+    padding: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.grid{
+    display: grid;
+    grid-template: repeat(6, auto)/1fr;
+    gap: 0.4em;
+    padding: 1px;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.2em;
+}
+.radio-inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.6em;
+}
+.radio-inputs div{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.6em;
+    gap: 0.8em;
+}
+.Checkbox-input {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    margin: 0.6em 0;
+}
+.inputs textarea,.inputs input[type='text'],.inputs input[type='email']{
+    padding: 0.6em;
+}
+/* message layout */
+.message-card{
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    transform: translateX(50%);
+    min-height: 6em;
+    min-width: 20em;
+    padding: 0.6em;
+}
+.message-title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4em;
+    margin: 0.6em;
+}
+
+@media screen and (min-width: 60em) {
+    .form-container{
+        width: 50%;
+        height: 40%;
+        margin: auto;
+    }
+    .grid {
+        grid-template: repeat(5, auto)/repeat(2,1fr);
+    }
+    .firstName {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .lastName {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .emailAddress {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+    .queryType {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+    .message {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+    }
+    .Checkbox-input {
+        grid-column: 1 / span 2;
+        grid-row: 5;
+    }
+    .radio-inputs {
+        flex-direction: row;
+        gap: 1.2em;
+    }
+}
